@@ -60,7 +60,7 @@ class Recorder:
     def _parse_function(serialized,height=height,width=width):
        features = \
        {
-          'image' : tf.FixedLenFeature([].tf.string),
+          'image' : tf.FixedLenFeature([],tf.string),
           'label' : tf.FixedLenFeature([], tf.int64)
        }
 

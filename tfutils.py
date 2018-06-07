@@ -80,7 +80,8 @@ class Recorder:
        image = tf.reshape(image, image_shape)
        image = tf.subtract(image, 116.779)
        #d = dict(zip(['image_name.jpg'],[image])) , [label]
-       d=image,label
+       #d=image,label
+       d={'input':image},tf.convert_to_tensor([label])
        return d
     
     dataset = tf.data.TFRecordDataset(filenames=filenames)

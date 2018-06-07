@@ -1,6 +1,5 @@
 import tensorflow as tf
 import sys
-import time
 from PIL import Image
 import numpy as np
 

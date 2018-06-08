@@ -51,7 +51,7 @@ with CustomObjectScope({'relu6': relu6}):
 
   rec=Recorder()
 
-  train_spec = tf.estimator.TrainSpec(input_fn =  lambda : rec.imgs_input_fn('/home/gmind/graymatics/development/Pratik_dev/tensorflow_experiments/output/cars.tfrecords',
+  train_spec = tf.estimator.TrainSpec(input_fn =  lambda : rec.imgs_input_fn('Pratik_dev/tensorflow_experiments/output/cars.tfrecords',
                                                                    height = 224,
                                                                    width = 224,
                                                                    shuffle=True,
@@ -59,7 +59,7 @@ with CustomObjectScope({'relu6': relu6}):
                                                                    batch_size=32), 
                                                                    max_steps=200)
 
-  eval_spec = tf.estimator.EvalSpec(input_fn=lambda: rec.imgs_input_fn('/home/gmind/graymatics/development/Pratik_dev/tensorflow_experiments/output/cars.tfrecords',
+  eval_spec = tf.estimator.EvalSpec(input_fn =    lambda: rec.imgs_input_fn('Pratik_dev/tensorflow_experiments/output/cars.tfrecords',
                                                                  height = 224,
                                                                  width = 224,
                                                                  shuffle=False,
